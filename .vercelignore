@@ -1,0 +1,6 @@
+.env
+.env.example
+server.mjs
+server.log
+node_modules
+dist

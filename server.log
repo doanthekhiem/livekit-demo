@@ -1,0 +1,6 @@
+
+> livekit-demo@0.0.1 server
+> node server.mjs
+
+[server] Token server chạy tại http://localhost:3001
+[server] LiveKit URL = wss://khiem-ezqzjlgo.livekit.cloud

@@ -1,0 +1,40 @@
+* { box-sizing: border-box; }
+html, body, #root { margin: 0; padding: 0; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; background: #0f172a; color: #e2e8f0; }
+
+.app { max-width: 1100px; margin: 0 auto; padding: 24px; display: grid; gap: 20px; }
+
+header { display: flex; align-items: baseline; gap: 16px; }
+header h1 { margin: 0; font-size: 24px; }
+.badge { padding: 4px 10px; border-radius: 999px; font-size: 12px; background: #334155; }
+.badge.state-connected { background: #16a34a; }
+.badge.state-connecting, .badge.state-reconnecting { background: #ca8a04; }
+.badge.state-disconnected { background: #475569; }
+
+.controls { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; padding: 16px; background: #1e293b; border-radius: 12px; }
+.controls label { display: flex; gap: 8px; align-items: center; font-size: 14px; }
+.controls input { padding: 6px 10px; border-radius: 6px; border: 1px solid #334155; background: #0f172a; color: inherit; font: inherit; }
+button { padding: 8px 14px; border-radius: 8px; border: 1px solid #334155; background: #334155; color: inherit; cursor: pointer; font: inherit; }
+button:hover { background: #475569; }
+button.primary { background: #2563eb; border-color: #2563eb; }
+button.primary:hover { background: #1d4ed8; }
+button.danger { background: #dc2626; border-color: #dc2626; }
+button.danger:hover { background: #b91c1c; }
+
+.stage { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.pane { background: #1e293b; border-radius: 12px; padding: 16px; }
+.pane h3 { margin: 0 0 12px 0; font-size: 14px; color: #94a3b8; text-transform: uppercase; letter-spacing: .05em; }
+.local-video, .remote-video { width: 100%; max-width: 480px; border-radius: 8px; background: #000; aspect-ratio: 16/9; object-fit: cover; }
+.remotes { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
+.remotes .remote-video { max-width: 240px; }
+.participant-list { margin: 0; padding-left: 18px; font-size: 13px; color: #cbd5e1; }
+
+.log { background: #020617; border-radius: 12px; padding: 16px; }
+.log h3 { margin: 0 0 8px 0; font-size: 13px; color: #94a3b8; text-transform: uppercase; letter-spacing: .05em; }
+.log pre { margin: 0; max-height: 260px; overflow: auto; font-size: 12px; line-height: 1.5; color: #a3e635; white-space: pre-wrap; }
+
+footer { color: #94a3b8; font-size: 13px; }
+footer code { background: #1e293b; padding: 1px 6px; border-radius: 4px; }
+
+@media (max-width: 720px) {
+  .stage { grid-template-columns: 1fr; }
+}
